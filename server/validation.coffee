@@ -1,7 +1,4 @@
 if Meteor.isServer
-    class User
-        constructor: (@userId) -> @time = Date.now()
-
 	Meteor.startup ->
 		Messages.allow
 			insert: (userId, doc) ->
