@@ -1,0 +1,27 @@
+<head>
+  <title>MessageBoard</title>
+</head>
+
+<body>
+  {{> header}}
+  {{> entry}}
+  {{> messages}}
+</body>
+
+<template name="header">
+	<p align="left" class="status" id="status">Disconnected.</p><p align="right" class="header" id="header">by <a style="color:#0b92ce; text-decoration:none" href="https://twitter.com/lieuwer">@LieuweR</a> with <a style="color:#0b92ce; text-decoration:none" href="http://www.meteor.com/">Meteor</a>.</p>
+</template>
+
+<template name="entry">
+	<p><input type="text" id="inputmessage" placeholder="message" class="autoWidthTextBox"></p>
+</template>
+
+<template name="messages">
+	{{#each messages}}
+		{{> message}}
+	{{/each}}
+</template>
+
+<template name="message">
+	<p class="messageOutput" id="message">{{message}}</p>
+</template>
